@@ -140,7 +140,6 @@
                 "tokenStoreEnabled": true,
                 "defaultProvider": "AzureActiveDirectory",
                 "clientId": "[parameters('appRegistrationClientId')]",
-                "issuer": "[concat('https://sts.windows.net/', variables('tenantId'), '/')]",
                 "allowedAudiences": [
                     "[parameters('appRegistrationApiURI')]"
                 ]
@@ -231,7 +230,7 @@
                 "[resourceId('Microsoft.Web/sites', concat('platforms' , variables('ProjectNameSuffix')))]"
             ],
             "properties": {
-                "AllowedUsers": "[parameters('userEmailAddress')]",
+                "AllowedUsers": "admin@virtualschools.onmicrosoft.com",
                 "AuthUrl": "[parameters('appRegistrationApiURI')]",
                 "ConnectApiBaseUrl": "[concat('https://','connect' , variables('ProjectNameSuffix'),'.azurewebsites.net/api/')]",
                 "FUNCTIONS_WORKER_RUNTIME": "[variables('runtimeStack')]",

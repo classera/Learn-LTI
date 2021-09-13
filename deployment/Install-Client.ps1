@@ -98,7 +98,7 @@ function Update-ClientConfig {
         [DotEnv]::REACT_APP_EDNA_AAD_CLIENT_ID="$AppId";
         [DotEnv]::REACT_APP_EDNA_MAIN_URL="$StaticWebsiteUrl";
         [DotEnv]::REACT_APP_EDNA_DEFAULT_SCOPE="$(Get-ADAppScope $AppId)";
-        [DotEnv]::REACT_APP_EDNA_TENANT_ID="$(Get-TenantId $AppId)";
+        [DotEnv]::REACT_APP_EDNA_TENANT_ID="08fc463b-bc59-4726-9d8c-27beba474c6d";
         [DotEnv]::REACT_APP_EDNA_LEARN_CONTENT="$(Get-ServiceUrl $LearnContentFunctionAppName)";
         [DotEnv]::REACT_APP_EDNA_LINKS_SERVICE_URL="$(Get-ServiceUrl $LinksFunctionAppName)";
         [DotEnv]::REACT_APP_EDNA_ASSIGNMENT_SERVICE_URL="$(Get-ServiceUrl $AssignmentsFunctionAppName)";
